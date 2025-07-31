@@ -1,42 +1,47 @@
-
 /* Your CSS Code here. */
-.player {
-  max-width: 750px;
-  margin: 20px auto;
-  background: #000;
-  border: 2px solid #444;
-  color: white;
+html {
+  box-sizing: border-box;
 }
 
-.viewer {
-  width: 100%;
-  height: auto;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 10px;
+body {
+  margin: 0;
   background: #222;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.player__button,
-.player__slider {
-  margin: 5px;
+.wrapper {
+  display: flex;
+  align-items: center;
 }
 
-.progress {
-  flex: 1;
-  height: 10px;
-  background: #ccc;
+.speed {
+  width: 50px;
+  height: 430px;
+  margin-left: 10px;
+  background: #eee;
   cursor: pointer;
-  margin: 5px 0;
+  position: relative;
+  border-radius: 5px;
 }
 
-.progress__filled {
-  width: 0;
-  background: #f00;
-  height: 100%;
-  flex-basis: 0%;
+.speed-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, #f00, #ff0);
+  height: 16%;
+  text-align: center;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-top: 5px;
 }
